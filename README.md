@@ -1,5 +1,8 @@
 # geo_me_simulator
 
+# Description
+This application simulates the location of a platform (the target) and a set of observations from the platform to a predefined set of landmarks (the asset(s)). The simulated data is intened to be fed into the Geo-me service. The observations are computed with a predetermined and modifiable random factor which adds a random error to the measurement. This error and resultant set of observations from each predefined asset enables easy and thorough testing of the Geo-me service under various scnearios.
+
 # Quick Start - Generating Example Inputs for the SingularityNET Geo-me Service
 1. navigate to standalone/
 2. modify input.json according to the guidelines below, retain input.json in the same folder location as geo_me .jar file

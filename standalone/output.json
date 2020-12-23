@@ -1,0 +1,80 @@
+{
+    "observation": [
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "A",
+            "meas": 39988.915385823304,
+            "lon": 179,
+            "id": 8949331466051835931,
+            "type": "range",
+            "lat": -17.2
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "A",
+            "meas": 5.448788631537186,
+            "lon": 179,
+            "id": -7411137328899287239,
+            "type": "aoa",
+            "lat": -17.2
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "B",
+            "meas": 40974.15595515924,
+            "lon": 178.9,
+            "id": -1837420518824005597,
+            "type": "range",
+            "lat": -17.6
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "B",
+            "meas": 0.37068463597739004,
+            "lon": 178.9,
+            "id": 2372390875766901388,
+            "type": "aoa",
+            "lat": -17.6
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "C",
+            "meas": 23460.933134189483,
+            "lon": 179.4,
+            "id": 4856596074439484704,
+            "type": "range",
+            "lat": -17.3
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "C",
+            "meas": 4.002440489961122,
+            "lon": 179.4,
+            "id": 6145508568317328356,
+            "type": "aoa",
+            "lat": -17.3
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "D",
+            "meas": 6060.546181447328,
+            "lon": 179.3,
+            "id": 7294480844367438988,
+            "type": "range",
+            "lat": -17.5
+        },
+        {
+            "targetId": "TEST_TARGET_A",
+            "assetId": "D",
+            "meas": 2.3641176768684784,
+            "lon": 179.3,
+            "id": 19121991363301552,
+            "type": "aoa",
+            "lat": -17.5
+        }
+    ],
+    "target": {
+        "name": "TEST_TARGET_NAME",
+        "id": "TEST_TARGET_A"
+    }
+}

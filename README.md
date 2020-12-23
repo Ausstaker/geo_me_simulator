@@ -8,6 +8,7 @@
    - Desktop UI: double click
 
 # Inputs - input.json
+```
 {
   "assets": [
     {
@@ -27,9 +28,11 @@
   "range_rand_factor": <double - [metres]//Guide 50m>,
   "aoa_rand_factor": <double - [radians]//Guide 0.1>
 }
+```
 
 # Outputs - output.json
 #  This output is formatted as input to the SingularityNET Geo-me service
+```
 {
     "observation": [
         {
@@ -48,3 +51,4 @@
         "id": "<string>"
     }
 }
+```

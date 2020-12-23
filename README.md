@@ -1,5 +1,12 @@
 # geo_me_simulator
 
+# Quick Start - Generating Example Inputs for the SingularityNET Geo-me Service
+1. navigate to standalone/
+2. modify input.json according to the guidelines below, retain input.json in the same folder location as geo_me .jar file
+3. run geo_me_simulator-1.0-SNAPSHOT-jar-with-dependencies.jar
+   - Command line: java -jar geo_me_simulator-1.0-SNAPSHOT-jar-with-dependencies.jar
+   - Desktop UI: double click
+
 # Inputs - input.json
 {
   "assets": [

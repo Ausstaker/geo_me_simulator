@@ -1,0 +1,16 @@
+{
+  "assets": [
+    {"id": "A","provide_aoa": true,"provide_range": true, "current_loc": [51.4, -0.05]},
+    {"id": "B","provide_aoa": true,"provide_range": true, "current_loc": [51.6, 0.05]},
+    {"id": "C","provide_aoa": true,"provide_range": true, "current_loc": [51.3, -0.2]},
+    {"id": "D","provide_aoa": true,"provide_range": true, "current_loc": [51.35, 0.0]}
+  ],
+  "target":{
+    "id":"TEST_TARGET_A",
+    "name":"TEST_TARGET_NAME",
+    "true_lat":51.509865,
+    "true_lon":-0.118092
+  },
+  "range_rand_factor": 50.0,
+  "aoa_rand_factor": 0.1
+}

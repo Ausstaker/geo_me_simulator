@@ -9,8 +9,7 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>geo_me_simulator</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/tgotech/geo_me_simulator</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,17 +24,58 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.7.21</version>
+      </dependency>
+      <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-core</artifactId>
+          <version>1.2.3</version>
+      </dependency>
+      <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+          <version>1.2.3</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/uk.me.jstott/jcoord -->
+      <dependency>
+          <groupId>uk.me.jstott</groupId>
+          <artifactId>jcoord</artifactId>
+          <version>1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20180130</version>
+      </dependency>
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>1.2.1</version>
+              <configuration>
+                  <mainClass>tech.tgo.snet.App</mainClass>
+                  <systemProperties>
+                      <systemProperty>
+                          <key>application_config.json</key>
+                      </systemProperty>
+                  </systemProperties>
+              </configuration>
+          </plugin>
+      </plugins>
+
+
+    <pluginManagement>
+      <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
@@ -60,7 +100,6 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
         </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
@@ -69,6 +108,28 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+          <plugin>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <mainClass>tech.tgo.snet.App</mainClass>
+                      </manifest>
+                  </archive>
+                  <descriptorRefs>
+                      <descriptorRef>jar-with-dependencies</descriptorRef>
+                  </descriptorRefs>
+              </configuration>
+              <executions>
+                  <execution>
+                      <id>make-assembly</id>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>single</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
       </plugins>
     </pluginManagement>
   </build>

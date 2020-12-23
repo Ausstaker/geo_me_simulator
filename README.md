@@ -31,7 +31,7 @@
 ```
 
 # Outputs - output.json
-#  This output is formatted as input to the SingularityNET Geo-me service
+The following output of the simulator is intended as "input" to the SingularityNET Geo-me service
 ```
 {
     "observation": [

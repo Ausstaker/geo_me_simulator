@@ -1,80 +1,72 @@
 {
     "observation": [
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "A",
-            "meas": 39988.915385823304,
+            "meas": 39998.71521217544,
             "lon": 179,
-            "id": 8949331466051835931,
+            "id": -236459586344027648,
             "type": "range",
             "lat": -17.2
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "A",
-            "meas": 5.448788631537186,
+            "meas": 5.444446122463144,
             "lon": 179,
-            "id": -7411137328899287239,
+            "id": 5394800386476065664,
             "type": "aoa",
             "lat": -17.2
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "B",
-            "meas": 40974.15595515924,
+            "meas": 41003.015884723165,
             "lon": 178.9,
-            "id": -1837420518824005597,
+            "id": 318622491602679072,
             "type": "range",
             "lat": -17.6
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "B",
-            "meas": 0.37068463597739004,
+            "meas": 0.3286601170765645,
             "lon": 178.9,
-            "id": 2372390875766901388,
+            "id": -8284571279422331768,
             "type": "aoa",
             "lat": -17.6
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "C",
-            "meas": 23460.933134189483,
+            "meas": 23477.500530578007,
             "lon": 179.4,
-            "id": 4856596074439484704,
+            "id": -393960426090039465,
             "type": "range",
             "lat": -17.3
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "C",
-            "meas": 4.002440489961122,
+            "meas": 3.956195979239345,
             "lon": 179.4,
-            "id": 6145508568317328356,
+            "id": 4237133869893652683,
             "type": "aoa",
             "lat": -17.3
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "D",
-            "meas": 6060.546181447328,
+            "meas": 6065.755684880221,
             "lon": 179.3,
-            "id": 7294480844367438988,
+            "id": -6228130418898947518,
             "type": "range",
             "lat": -17.5
         },
         {
-            "targetId": "TEST_TARGET_A",
             "assetId": "D",
-            "meas": 2.3641176768684784,
+            "meas": 2.365540885184193,
             "lon": 179.3,
-            "id": 19121991363301552,
+            "id": 5804859597514816021,
             "type": "aoa",
             "lat": -17.5
         }
     ],
     "target": {
         "name": "TEST_TARGET_NAME",
-        "id": "TEST_TARGET_A"
+        "id": "TEST_TARGET_AASDASDSADASD"
     }
 }

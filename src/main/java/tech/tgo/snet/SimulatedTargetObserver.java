@@ -72,7 +72,6 @@ public class SimulatedTargetObserver implements Callable<JSONObject> {
                     obs.put("assetId", asset.getId());
                     obs.put("lat", asset.getCurrent_loc()[0]);
                     obs.put("lon", asset.getCurrent_loc()[1]);
-                    obs.put("targetId", testTarget.getId());
                     observations.put(obs);
                 }
 
@@ -92,7 +91,6 @@ public class SimulatedTargetObserver implements Callable<JSONObject> {
                     obs.put("assetId", asset.getId());
                     obs.put("lat", asset.getCurrent_loc()[0]);
                     obs.put("lon", asset.getCurrent_loc()[1]);
-                    obs.put("targetId", testTarget.getId());
                     observations.put(obs);
                 }
                 log.debug("number obs: "+observations.length());

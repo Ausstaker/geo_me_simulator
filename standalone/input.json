@@ -6,7 +6,7 @@
     {"id": "D","provide_aoa": true,"provide_range": true, "current_loc": [-17.5, 179.3]}
   ],
   "target":{
-    "id":"TEST_TARGET_A",
+    "id":"TEST_TARGET_AASDASDSADASD",
     "name":"TEST_TARGET_NAME",
     "true_lat":-17.4624892,
     "true_lon":179.2583049

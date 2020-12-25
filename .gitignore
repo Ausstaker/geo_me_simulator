@@ -13,6 +13,7 @@
 # Package Files #
 *.jar
 !geo_me_simulator-1.0-SNAPSHOT-jar-with-dependencies.jar
+!geo_me_simulator-1.0-SNAPSHOT-runnable.jar
 *.war
 *.nar
 *.ear

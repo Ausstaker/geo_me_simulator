@@ -10,6 +10,7 @@ import tech.tgo.snet.util.TestAsset;
 import tech.tgo.snet.util.TestTarget;
 import java.util.*;
 import java.util.concurrent.Callable;
+import java.util.stream.Collectors;
 
 /**
  * Simulate new observations following target
@@ -32,27 +33,24 @@ public class SimulatedTargetObserver implements Callable<JSONObject> {
     @Override
     public JSONObject call() throws Exception {
 
-        log.debug("Running sim observer");
         JSONObject simulation_scenario = new JSONObject();
-
-        for (TestTarget testTarget :testTargets.values()) {
-            JSONObject target = new JSONObject();
-            target.put("id", testTarget.getId());
-            target.put("name", testTarget.getName());
-            simulation_scenario.put("target", target);
-        }
-
         JSONArray observations = new JSONArray();
 
+        List<TestAsset> testAssetsList = testAssets.values().stream().collect(Collectors.toList());
+        Object[] zones = ObservationTestHelpers.getMostPopularUTMZonesFromAssets(testAssetsList);
+        int mostPopularLonZone = (int)zones[1];
+        char mostPopularLatZone = (char)zones[0];
+        log.debug("Most popular Lat Zone: "+mostPopularLatZone+", Lon Zone: "+mostPopularLonZone);
+
         for (TestTarget testTarget :testTargets.values()) {
-            double[] utm_coords = ObservationTestHelpers.convertLatLngToUtmNthingEasting(testTarget.getTrue_lat(), testTarget.getTrue_lon());
+            double[] utm_coords = ObservationTestHelpers.convertLatLngToUtmNthingEastingSpecificZone(testTarget.getTrue_lat(), testTarget.getTrue_lon(), mostPopularLatZone, mostPopularLonZone);
             double true_y = utm_coords[0];
             double true_x = utm_coords[1];
 
             /* for each asset, generate relevant observations */
-            log.debug("enerating observations from # assets: " + testAssets.keySet().size());
+            log.debug("Generating observations from # assets: " + testAssets.keySet().size());
             for (TestAsset asset : testAssets.values()) {
-                utm_coords = ObservationTestHelpers.convertLatLngToUtmNthingEasting(asset.getCurrent_loc()[0], asset.getCurrent_loc()[1]);
+                utm_coords = ObservationTestHelpers.convertLatLngToUtmNthingEastingSpecificZone(asset.getCurrent_loc()[0], asset.getCurrent_loc()[1], mostPopularLatZone, mostPopularLonZone);
                 double asset_y = utm_coords[0];
                 double asset_x = utm_coords[1];
 
@@ -97,7 +95,15 @@ public class SimulatedTargetObserver implements Callable<JSONObject> {
             }
         }
         log.debug("number obs: "+observations.length());
+
         simulation_scenario.put("observation", observations);
+        for (TestTarget testTarget :testTargets.values()) {
+            JSONObject target = new JSONObject();
+            target.put("id", testTarget.getId());
+            target.put("name", testTarget.getName());
+            simulation_scenario.put("target", target);
+        }
+        simulation_scenario.put("provide_kml_out", true);
         return simulation_scenario;
     }
 

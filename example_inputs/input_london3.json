@@ -1,0 +1,30 @@
+{
+  "assets": [
+    {"id": "A","provide_aoa": true,"provide_range": true, "current_loc": [51.4, -0.05]},
+    {"id": "B","provide_aoa": true,"provide_range": true, "current_loc": [51.6, 0.05]},
+    {"id": "C","provide_aoa": true,"provide_range": true, "current_loc": [51.3, -0.2]},
+    {"id": "D","provide_aoa": true,"provide_range": true, "current_loc": [51.35, 0.0]},
+    {"id": "E","provide_aoa": true,"provide_range": true, "current_loc": [51.33, -0.18]},
+    {"id": "F","provide_aoa": true,"provide_range": true, "current_loc": [51.38, 0.03]},
+    {"id": "G","provide_aoa": true,"provide_range": true, "current_loc": [51.42, -0.15]},
+    {"id": "H","provide_aoa": true,"provide_range": true, "current_loc": [51.45, 0.13]},
+    {"id": "I","provide_aoa": true,"provide_range": true, "current_loc": [51.48, -0.09]},
+    {"id": "J","provide_aoa": true,"provide_range": true, "current_loc": [51.53, 0.07]},
+    {"id": "K","provide_aoa": true,"provide_range": true, "current_loc": [51.55, -0.06]},
+    {"id": "L","provide_aoa": true,"provide_range": true, "current_loc": [51.38, 0.04]},
+    {"id": "M","provide_aoa": true,"provide_range": true, "current_loc": [51.62, -0.02]},
+    {"id": "N","provide_aoa": true,"provide_range": true, "current_loc": [51.61, 0.07]},
+    {"id": "O","provide_aoa": true,"provide_range": true, "current_loc": [51.57, -0.17]},
+    {"id": "P","provide_aoa": true,"provide_range": true, "current_loc": [51.52, -0.14]},
+    {"id": "Q","provide_aoa": true,"provide_range": true, "current_loc": [51.47, -0.22]},
+    {"id": "R","provide_aoa": true,"provide_range": true, "current_loc": [51.44, 0.01]},
+  ],
+  "target":{
+    "id":"TEST_TARGET_A",
+    "name":"TEST_TARGET_NAME",
+    "true_lat":51.509865,
+    "true_lon":-0.118092
+  },
+  "range_rand_factor": 50.0,
+  "aoa_rand_factor": 0.1
+}

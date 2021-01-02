@@ -51,6 +51,7 @@ The following output of the simulator is intended as "input" to the SingularityN
     "target": {
         "name": "<string>",
         "id": "<string>"
-    }
+    },
+    "provide_kml_out": true
 }
 ```

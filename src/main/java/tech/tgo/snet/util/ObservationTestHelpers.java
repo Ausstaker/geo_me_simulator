@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author Timothy Edge (timmyedge)
+ * @author edge2ipi (https://github.com/Ausstaker)
  */
 public class ObservationTestHelpers {
 

@@ -15,7 +15,7 @@ import java.util.concurrent.FutureTask;
 
 /**
  * Simulate new observations following target
- * @author Timothy Edge (timmyedge)
+ * @author edge2ipi (https://github.com/Ausstaker)
  */
 public class App 
 {

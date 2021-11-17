@@ -1,7 +1,7 @@
 package tech.tgo.snet.util;
 
 /**
- * @author Timothy Edge (timmyedge)
+ * @author edge2ipi (https://github.com/Ausstaker)
  */
 public enum ObservationType {
     range,tdoa,aoa;

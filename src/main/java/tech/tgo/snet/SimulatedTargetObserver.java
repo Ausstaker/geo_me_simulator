@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 /**
  * Simulate new observations following target
- * @author Timothy Edge (timmyedge)
+ * @author edge2ipi (https://github.com/Ausstaker)
  */
 public class SimulatedTargetObserver implements Callable<JSONObject> {
 
